@@ -1,0 +1,12 @@
+name: code
+title: Code
+username: rh-ecoflux
+account: rh-ecoflux
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13971395
+bundleId: 9801673
+url: https://rh-ecoflux.shinyapps.io/code/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
