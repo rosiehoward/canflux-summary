@@ -1,0 +1,82 @@
+Site ID	Site Name	Principal Investigator	Lat (deg)	Lon (deg)	Elevation (m)
+CA-AF1	Acadia Research Forest	Manuel Helbig	46.0092	-66.3627	78
+CA-ARB	Attawapiskat River Bog	Elyn Humphreys	52.6950	-83.9452	90
+CA-ARF	Attawapiskat River Fen	Elyn Humphreys	52.7008	-83.9550	88
+CA-BCW	Big Creek Watershed	Carlos Barreto	42.6206	-80.5516	201
+CA-BOU	Bouleau Peatland	Michelle Garneau	50.5244	-63.2064	108
+CA-BSM	Black Spruce Moss Forest	Daniel Nadeau	50.9021	-63.4052	271
+CA-Ca1	British Columbia - 1949 Douglas-fir stand	T. Andrew Black	49.8673	-125.3336	300
+CA-Ca2	British Columbia - Clearcut Douglas-fir stand (harvested winter 1999/2000)	T. Andrew Black	49.8705	-125.2909	300
+CA-Ca3	British Columbia - Pole sapling Douglas-fir stand	T. Andrew Black	49.5346	-124.9004	
+CA-Cbo	"Ontario - Mixed Deciduous, Borden Forest Site"	Ralf Staebler	44.3184	-79.9341	210
+CA-CF1	Churchill Fen Site 1	Tim Papakyriakou	58.6658	-93.8300	16.5
+CA-CF2	Churchill Fen Site 2	Mario Tenuta	58.6658	-93.8300	16.5
+CA-CF3	Churchill Fen Site 3	Susan Natali	58.6658	-93.8304	25
+CA-Cha	New Brunswick - Charlie Lake site 01 (immature balsam fir forest to be thinned in year 3)	Charles Bourque	45.8847	-67.3569	341
+CA-CQ1	Québec. Carbonique1 - Lac Saint-Pierre Disturbed Marsh	Sara Knox	46.1645	-72.6850	6
+CA-DB2	Delta Burns Bog 2	Sara Knox	49.1190	-122.9951	4
+CA-DBB	Delta Burns Bog	Sara Knox	49.1293	-122.9849	4
+CA-DL1	Daring Lake - Mixed Tundra	Peter Lafleur	64.8689	-111.5748	425
+CA-DL2	Daring Lake - Fen	Peter Lafleur	64.8648	-111.5677	416
+CA-DSM	Delta Salt Marsh	Sara Knox	49.0887	-122.8954	
+CA-EM1	Newdale Manitoba	Pascal Badiou	50.3623	-100.2024	607.9
+CA-EM2	Shoal Lake Manitoba	Pascal Badiou	50.3706	-100.5339	554.3
+CA-EM3	Oak Hammock Marsh Manitoba	Pascal Badiou	50.1738	-97.1231	255
+CA-ER1	Elora Research Station	Claudia Wagner-Riddle	43.6405	-80.4123	370
+CA-ER2	Elora Research Station	Claudia Wagner-Riddle	43.6419	-80.4140	370
+CA-Gro	"Ontario - Groundhog River, Boreal Mixedwood Forest"	Harry McCaughey	48.2167	-82.1556	340
+CA-HPC	Havikpak Creek	Phil Marsh	68.3203	-133.5188	80
+CA-IQT	Iqaluit Tundra	Murray Richardson	63.7507	-68.4285	197
+CA-KLP	Kinoje Lake Peatland	Elyn Humphreys	51.5902	-81.7684	71
+CA-Let	Alberta - Mixed Grass Prairie	Lawrence B. Flanagan	49.7093	-112.9402	960
+CA-LP1	British Columbia - Mountain pine beetle-attacked lodgepole pine stand 	Thomas Andrew Black	55.1119	-122.8414	751
+CA-LU1	Steen River	Oliver Sonnentag	59.5951	-117.2862	311
+CA-LU2	Lutose	Oliver Sonnentag	59.4405	-117.2422	324
+CA-LuM	Luther Marsh Wildlife Management Area	Elisa Fleischer	43.9201	-80.4052	485
+CA-MA1	Manitoba Agricultural Site 1	Brian Amiro	50.1645	-97.8762	261
+CA-MA2	Manitoba Agricultural Site 2	Brian Amiro	50.1710	-97.8762	261
+CA-MA3	Manitoba Agricultural Site 3	Brian Amiro	50.1774	-97.8686	261
+CA-Man	Manitoba - Northern Old Black Spruce (former BOREAS Northern Study Area)	Brian Amiro	55.8796	-98.4808	259
+CA-Mer	"Ontario - Eastern Peatland, Mer Bleue"	Peter Lafleur	45.4094	-75.5186	70
+CA-MR3	Mattheis Ranch - E3 South	Dr. Edward Bork	50.8671	-111.9045	712
+CA-MR5	Mattheis Ranch - E5 North	Dr. Edward Bork	50.9056	-111.8823	700
+CA-Mtk	Mittimatalik (Pond Inlet) Tundra	Susan Natali	72.6695	-77.9981	15
+CA-Na1	New Brunswick - 1967 Balsam Fir - Nashwaak Lake Site 01 (Mature balsam fir forest)	Charles P.-A. Bourque	46.4722	-67.1000	341
+CA-NS1	UCI-1850 burn site	Mike Goulden	55.8792	-98.4839	260
+CA-NS2	UCI-1930 burn site	Mike Goulden	55.9058	-98.5247	260
+CA-NS3	UCI-1964 burn site	Mike Goulden	55.9117	-98.3822	260
+CA-NS4	UCI-1964 burn site wet	Mike Goulden	55.9144	-98.3806	260
+CA-NS5	UCI-1981 burn site	Mike Goulden	55.8631	-98.4850	260
+CA-NS6	UCI-1989 burn site	Mike Goulden	55.9167	-98.9644	244
+CA-NS7	UCI-1998 burn site	Mike Goulden	56.6358	-99.9483	297
+CA-NS8	UCI-2003 burn site	Mike Goulden	55.8981	-98.2161	274
+CA-Oas	"Saskatchewan - Western Boreal, Mature Aspen"	Andy Black	53.6289	-106.1978	530
+CA-Obs	"Saskatchewan - Western Boreal, Mature Black Spruce"	Warren Helgason	53.9872	-105.1178	628.94
+CA-Ojp	"Saskatchewan - Western Boreal, Mature Jack Pine"	Warren Helgason	53.9163	-104.6920	579
+CA-Qc2	Quebec - 1975 Harvested Black Spruce (HBS75)	Hank Margolis	49.7598	-74.5711	
+CA-Qcu	"Quebec - Eastern Boreal, Black Spruce/Jack Pine Cutover"	Hank A. Margolis	49.2671	-74.0365	392.3
+CA-Qfo	"Quebec - Eastern Boreal, Mature Black Spruce"	Hank A. Margolis	49.6925	-74.3421	382
+CA-RBM	Richmond Brackish Marsh	Sara Knox	49.1313	-123.1964	
+CA-RPn	Robinsons_Natural_Bog_NL	Jianghua Wu	48.2604	-58.6632	150
+CA-RPp	Robinsons_Peatland_Pasture_NL	Jianghua Wu	48.2632	-58.6670	162
+CA-RSB	Resolute Bay Polar Desert	Susan Natali	74.7279	-94.8985	119
+CA-SCB	Scotty Creek Bog	Oliver Sonnentag	61.3089	-121.2984	280
+CA-SCC	Scotty Creek Landscape	Oliver Sonnentag	61.3079	-121.2992	285
+CA-SF1	"Saskatchewan - Western Boreal, forest burned in 1977"	Brian Amiro	54.4850	-105.8176	536
+CA-SF2	"Saskatchewan - Western Boreal, forest burned in 1989"	Brian Amiro	54.2539	-105.8775	520
+CA-SF3	"Saskatchewan - Western Boreal, forest burned in 1998"	Brian Amiro	54.0916	-106.0053	540
+CA-SJ1	"Saskatchewan - Western Boreal, Jack Pine forest harvested in 1994"	Alan Barr	53.9080	-104.6560	580
+CA-SJ2	"Saskatchewan - Western Boreal, Jack Pine forest harvested in 2002"	Alan Barr	53.9450	-104.6490	580
+CA-SJ3	"Saskatchewan - Western Boreal, Jack Pine forest harvested in 1975 (BOREAS Young Jack Pine)"	Alan Barr	53.8758	-104.6453	
+CA-SMC	Smith Creek	Oliver Sonnentag	63.1534	-123.2522	150
+CA-TP1	Ontario - Turkey Point 2002 Plantation White Pine	M. Altaf Arain	42.6609	-80.5595	265
+CA-TP2	Ontario - Turkey Point 1989 Plantation White Pine	M. Altaf Arain	42.7744	-80.4588	212
+CA-TP3	Ontario - Turkey Point 1974 Plantation White Pine	M. Altaf Arain	42.7068	-80.3483	184
+CA-TP4	Ontario - Turkey Point 1939 Plantation White Pine	M. Altaf Arain	42.7102	-80.3574	184
+CA-TPA	Ontario Turkey Point Observatory Agricultural Site	M. Altaf Arain	42.6947	-80.3487	200
+CA-TPD	Ontario - Turkey Point Mature Deciduous	M. Altaf Arain	42.6353	-80.5577	260
+CA-TVC	Trail Valley Creek	Philip Marsh	68.7462	-133.5017	85
+CA-WP1	"Alberta - Western Peatland - LaBiche River,Black Spruce/Larch Fen"	Lawrence B. Flanagan	54.9538	-112.4670	540
+CA-WP2	Alberta - Western Peatland - Poor Fen (Sphagnum moss)	Lawrence B. Flanagan	55.5375	-112.3343	
+CA-WP3	Alberta - Western Peatland - Rich Fen  (Carex)	Lawrence B. Flanagan	54.4700	-113.3200	
+CA-WRF	White River Fen	Carlos Barreto	48.3513	-85.3571	485

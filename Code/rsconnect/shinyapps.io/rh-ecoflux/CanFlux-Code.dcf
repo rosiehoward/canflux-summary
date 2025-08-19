@@ -1,0 +1,13 @@
+name: CanFlux-Code
+title: CanFlux-Code
+username: rh-ecoflux
+account: rh-ecoflux
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15229804
+bundleId: 10792934
+url: https://rh-ecoflux.shinyapps.io/CanFlux-Code/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app_Ameriflux.R

@@ -23,8 +23,8 @@ library(stringr)
 library(DT)
 library(leaflet)
 library(htmltools)
-library(shinydashboard)
-library(plotly)
+#library(shinydashboard)
+#library(plotly)
 
 # Start define rowCallback function
 # This is to allow NAs to appear in datatables
@@ -48,6 +48,7 @@ rowCallback <- c(
 
 # ***Eventually site list from loaded data above and site list from Site Information page (tsv file) will match!***
 # Temporary solution: rename map sites as sites_map so previous site list is not overwritten
+sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canflux-summary/refs/heads/main/Data/AmeriFlux-sites-Canadian.tsv", show_col_types = FALSE)
 sites_map <- read_tsv(file = "https://github.com/rosiehoward/canflux-summary/blob/df9d52942ffe949e076bbe139b20eb8366076d28/Data/AmeriFlux-sites-Canadian.tsv", show_col_types = FALSE)
 #sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canpeat-summary/refs/heads/main/Data/CanPeat-TSV.tsv", show_col_types = FALSE)
 
@@ -111,27 +112,27 @@ labs <- lapply(seq(nrow(sites_map)), function(i) {
 
 # Define UI for application
 
-# ui <- fluidPage(theme = shinytheme("flatly"),
-ui <- dashboardPage(skin = 'black', # Begin UI 
+ui <- fluidPage(theme = shinytheme("flatly"),
+#ui <- dashboardPage(skin = 'black', # Begin UI 
                     
-                    dashboardHeader(title = "CanFlux Sites"),
-                    
-                    dashboardSidebar(sidebarMenu(
-                      menuItem("Site Information", tabName = "siteinfo"),
-                      menuItem("Individual sites", tabName = "indiv"),
-                      menuItem("All sites", tabName = "all"),
-                      menuItem("About", tabName = "about")
-                    )), # End dashboard sidebar
+                    # dashboardHeader(title = "CanFlux Sites"),
+                    # 
+                    # dashboardSidebar(sidebarMenu(
+                    #   menuItem("Site Information", tabName = "siteinfo"),
+                    #   menuItem("Individual sites", tabName = "indiv"),
+                    #   menuItem("All sites", tabName = "all"),
+                    #   menuItem("About", tabName = "about")
+                    # )), # End dashboard sidebar
 
     # Application title
-    titlePanel(div("Can-Peat Flux Sites", style = "background-color: #f2f2f2")),
-    # titlePanel("Can-Peat Flux Sites"),
+    #titlePanel(div("Can-Peat Flux Sites", style = "background-color: #f2f2f2")),
+    titlePanel("Can-Peat Flux Sites"),
 
          mainPanel(fluidRow(column(12,
                                    h2("Summary"),
          )
          ),# End fluidrow 
-        dashboardBody( # Begin dashboard body
+         #dashboardBody( # Begin dashboard body
          #              
          #              # Suppress warnings
          #              tags$style(type="text/css",
@@ -319,40 +320,55 @@ ui <- dashboardPage(skin = 'black', # Begin UI
                         # ), # End tab panels section
 
 
-                        tabItem( # Begin 'About' page
-                        h1('About'),
+                        # tabItem( # Begin 'About' page
+                        # h1('About'),
                           
-                        tabName = "about",
-                        # Start footer
-                        h3('About the Site Information Display'),
-                        h4(style="text-align: justify;", 
-                          "The metadata presented here were gathered from directly from PIs, Data Managers, or from the ",
-                              tags$a(href = 'https://ameriflux.lbl.gov/sites/site-search/#', 'AmeriFlux Site Search', target="_blank"),
-                              " in February 2025."
-                                     ), 
+                        # tabName = "about",
 
-                        br(),
-                          h3('About the Data Visualization Tool'),
-                          h4(style="text-align: justify;", 
-                             'This app was modified from the ', tags$a(href="https://ameriflux.shinyapps.io/version1/", "Ameriflux data visualization tool", target="_blank")),
-                          h4(style="text-align: justify;",
-                             'EDIT: If you are interested in learning more, improving this app, or building one yourself, check out the ', tags$a(href = 'https://shiny.rstudio.com/', 'RShiny package in R', target = 'blank'), ' or contact ', tags$a(href="https://sruehr.github.io/", "Sophie Ruehr.", target = 'blank'), 
-                             'Code for this app is available on ', tags$a(href = 'https://github.com/sruehr?tab=repositories', 'GitHub.', target = 'blank')), 
-                          
-                          br(),
-                          h3('Acknowledgements'),
-                          h4(style="text-align: justify;",
-                             'Site information page based on code from ', tags$a(href = 'https://github.com/norlab/ameriflux-analysis', 'https://github.com/norlab/ameriflux-analysis', target = 'blank'), '. Data visualization application was developed by Sara Knox based on the original code by Sophie Ruehr, which is available is available on ', tags$a(href = 'https://github.com/sruehr?tab=repositories', 'GitHub.', target = 'blank')), 
+                        # Start footer
+
+                        fluidRow(br()),
+                        fluidRow(column(12,
+                                       tags$footer(
+                                          p(
+                                              "The data presented here were gathered from the ",
+                                            tags$a(href = 'https://ameriflux.lbl.gov/sites/site-search/#', 'AmeriFlux Site Search'),
+                                              " table in August 2025."
+                                            ), 
+                                      class = "footer")
+                                    )
+                              )
+                        # End footer
+
+                        # h3('About the Site Information Display'),
+                        # h4(style="text-align: justify;", 
+                        #   "The metadata presented here were gathered from directly from PIs, Data Managers, or from the ",
+                        #       tags$a(href = 'https://ameriflux.lbl.gov/sites/site-search/#', 'AmeriFlux Site Search', target="_blank"),
+                        #       " in February 2025."
+                        #              ), 
+                        # 
+                        # br(),
+                        #   h3('About the Data Visualization Tool'),
+                        #   h4(style="text-align: justify;", 
+                        #      'This app was modified from the ', tags$a(href="https://ameriflux.shinyapps.io/version1/", "Ameriflux data visualization tool", target="_blank")),
+                        #   h4(style="text-align: justify;",
+                        #      'EDIT: If you are interested in learning more, improving this app, or building one yourself, check out the ', tags$a(href = 'https://shiny.rstudio.com/', 'RShiny package in R', target = 'blank'), ' or contact ', tags$a(href="https://sruehr.github.io/", "Sophie Ruehr.", target = 'blank'), 
+                        #      'Code for this app is available on ', tags$a(href = 'https://github.com/sruehr?tab=repositories', 'GitHub.', target = 'blank')), 
+                        #   
+                        #   br(),
+                        #   h3('Acknowledgements'),
+                        #   h4(style="text-align: justify;",
+                        #      'Site information page based on code from ', tags$a(href = 'https://github.com/norlab/ameriflux-analysis', 'https://github.com/norlab/ameriflux-analysis', target = 'blank'), '. Data visualization application was developed by Sara Knox based on the original code by Sophie Ruehr, which is available is available on ', tags$a(href = 'https://github.com/sruehr?tab=repositories', 'GitHub.', target = 'blank')), 
 
                         # ))
          )  # End dashboard body 
-         )  # End main panel
-) # End UI
+         #)  # End main panel
+# ) # End UI
 
 
 # Define server logic required 
-server <- function(input, output, session) {
-# server <- function(input, output) {
+# server <- function(input, output, session) {
+server <- function(input, output) {
 
      # Begin Create NY5Z map
      # Disabled scroll wheel option. Instuctions a combo from https://gis.stackexchange.com/a/54925
