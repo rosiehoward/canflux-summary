@@ -48,7 +48,7 @@ rowCallback <- c(
 
 # ***Eventually site list from loaded data above and site list from Site Information page (tsv file) will match!***
 # Temporary solution: rename map sites as sites_map so previous site list is not overwritten
-sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canpeat-summary/refs/heads/main/Data/AmeriFlux-sites-Canadian.tsv", show_col_types = FALSE)
+sites_map <- read_tsv(file = "https://github.com/rosiehoward/canflux-summary/blob/df9d52942ffe949e076bbe139b20eb8366076d28/Data/AmeriFlux-sites-Canadian.tsv", show_col_types = FALSE)
 #sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canpeat-summary/refs/heads/main/Data/CanPeat-TSV.tsv", show_col_types = FALSE)
 
 # Filter to just sites in Canada
