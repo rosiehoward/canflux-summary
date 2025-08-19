@@ -1,4 +1,8 @@
-#
+# RShiny app for displaying CanFlux map and data visualization
+# Rosie Howard
+# 19 August 2025
+# Based on https://github.com/norlab/ameriflux-analysis (displayed here:https://bree.shinyapps.io/Canadian-AmeriFlux-Sites/) by Bree Norlander
+
 # This is a Shiny web application. You can run the application by clicking
 # the 'Run App' button above.
 #
@@ -44,8 +48,8 @@ rowCallback <- c(
 
 # ***Eventually site list from loaded data above and site list from Site Information page (tsv file) will match!***
 # Temporary solution: rename map sites as sites_map so previous site list is not overwritten
-sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canpeat-summary/refs/heads/main/Data/CanPeat-TSV.tsv", show_col_types = FALSE)
-
+sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canpeat-summary/refs/heads/main/Data/AmeriFlux-sites-Canadian.tsv", show_col_types = FALSE)
+#sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canpeat-summary/refs/heads/main/Data/CanPeat-TSV.tsv", show_col_types = FALSE)
 
 # Filter to just sites in Canada
 sites_map <- sites_map |> 
@@ -90,7 +94,7 @@ labs <- lapply(seq(nrow(sites_map)), function(i) {
            '<br><b>Elev (m):</b> ', 
           sites_map[i, "Elevation (m)"],
            '<br><b>Clean Data:</b> ', 
-          sites_map[i, "Years of Clean Data"],
+          sites_map[i, "Years of AmeriFlux BASE Data"],
           '<br><b>PI:</b> ', 
           sites_map[i, "Principal Investigator"])
 })
@@ -110,7 +114,7 @@ labs <- lapply(seq(nrow(sites_map)), function(i) {
 # ui <- fluidPage(theme = shinytheme("flatly"),
 ui <- dashboardPage(skin = 'black', # Begin UI 
                     
-                    dashboardHeader(title = "Can-Peat Flux Sites"),
+                    dashboardHeader(title = "CanFlux Sites"),
                     
                     dashboardSidebar(sidebarMenu(
                       menuItem("Site Information", tabName = "siteinfo"),
@@ -147,7 +151,7 @@ ui <- dashboardPage(skin = 'black', # Begin UI
 
                           fluidRow(br()),# End fluidrow 
                           fluidRow(column(12,
-                                  p(paste0("Sample of ", total_sites, " peatland sites for which data is being collected and cleaned using the EcoFlux Lab's data cleaning pipeline. This sample represents Eddy-Covariance research sites across Canada associated with ", total_pi, " Principal Investigators. Further sites will be added as data is collected and cleaned.")),
+                                  p(paste0("Sample of Canadian sites for which data has been collected at any time. This sample represents Eddy-Covariance research sites across Canada associated with ", total_pi, " Principal Investigators. Further sites will be added as data is collected and cleaned.")),
                           )),# End fluidrow 
                           fluidRow(column(8,
                                  h2("Map View")
