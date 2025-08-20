@@ -22,8 +22,8 @@ CA-DSM	Delta Salt Marsh	Sara Knox	49.0887	-122.8954
 CA-EM1	Newdale Manitoba	Pascal Badiou	50.3623	-100.2024	607.9
 CA-EM2	Shoal Lake Manitoba	Pascal Badiou	50.3706	-100.5339	554.3
 CA-EM3	Oak Hammock Marsh Manitoba	Pascal Badiou	50.1738	-97.1231	255
-CA-ER1	Elora Research Station	Claudia Wagner-Riddle	43.6405	-80.4123	370
-CA-ER2	Elora Research Station	Claudia Wagner-Riddle	43.6419	-80.4140	370
+CA-ER1	Elora Research Station 1	Claudia Wagner-Riddle	43.6405	-80.4123	370
+CA-ER2	Elora Research Station 2	Claudia Wagner-Riddle	43.6419	-80.4140	370
 CA-Gro	"Ontario - Groundhog River, Boreal Mixedwood Forest"	Harry McCaughey	48.2167	-82.1556	340
 CA-HPC	Havikpak Creek	Phil Marsh	68.3203	-133.5188	80
 CA-IQT	Iqaluit Tundra	Murray Richardson	63.7507	-68.4285	197
@@ -82,15 +82,15 @@ CA-WP3	Alberta - Western Peatland - Rich Fen  (Carex)	Lawrence B. Flanagan	54.47
 CA-WRF	White River Fen	Carlos Barreto	48.3513	-85.3571	485
 NA	Sibbald Fen	Rich Petrone	51.0600	-114.8700	1490
 NA	Finn’s Fen	David Olefeldt	59.2610	-117.4205	
-NA	"Yukon, Wolf Creek Research Basin"	Sean Carey	60.5969	-134.9528	NA
-NA	"Yukon, Wolf Creek Research Basin"	Sean Carey	60.5216	-135.1972	NA
-NA	"Yukon, Wolf Creek Research Basin"	Sean Carey	60.5451	-135.1910	NA
+NA	"Yukon, Wolf Creek Research Basin 1"	Sean Carey	60.5969	-134.9528	NA
+NA	"Yukon, Wolf Creek Research Basin 2"	Sean Carey	60.5216	-135.1972	NA
+NA	"Yukon, Wolf Creek Research Basin 3"	Sean Carey	60.5451	-135.1910	NA
 NA	"NWT, Mackenzie Delta"	June Skeeter's PhD site	69.3723	-134.8811	NA
-NA	"Quebec, Magog"	Ali Nazemi	45.2675	-72.1615	NA
-NA	"Quebec, Magog"	Ali Nazemi	45.2828	-72.1664	NA
+NA	"Quebec, Magog 1"	Ali Nazemi	45.2675	-72.1615	NA
+NA	"Quebec, Magog 2"	Ali Nazemi	45.2828	-72.1664	NA
 NA	"NWT, Yellowknife Airport"	Elyn Humphrys	62.4709	-114.4380	NA
-NA	"Nunuvit, Cambridge Bay"	Alex Roy	69.2346	-104.9033	NA
-NA	"Nunuvit, Cambridge Bay"	Alex Roy	69.2220	-104.8980	NA
-NA	"Nunuvit, Cambridge Bay"	Group from Korea			NA
+NA	"Nunuvit, Cambridge Bay 1"	Alex Roy	69.2346	-104.9033	NA
+NA	"Nunuvit, Cambridge Bay 2"	Alex Roy	69.2220	-104.8980	NA
+NA	"Nunuvit, Cambridge Bay 3"	Group from Korea			NA
 NA	"Quebec, Saint Sophie"	Oliver Sonnentag	45.7759	-73.9088	NA
 NA	"Quebec, Sainte-Marthe (Rigaud)"	Michel Baraër? GEOTOP at UQAM			NA

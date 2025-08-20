@@ -149,7 +149,9 @@ ui <- fluidPage(theme = shinytheme("flatly"),
 
                           fluidRow(br()),# End fluidrow 
                           fluidRow(column(12,
-                                  p(paste0("Sample of Canadian sites for which data has been collected at any time. This sample represents Eddy-Covariance research sites across Canada associated with ", total_pi, " Principal Investigators. Further sites will be added as data is collected and cleaned.")),
+                                  p(paste0("Sample of Canadian sites for which data has been collected at any time. 
+                                           This sample of ", total_sites, " sites represents Eddy-Covariance research sites across Canada associated 
+                                           with ", total_pi, " Principal Investigators. Further sites will be added as data is collected and cleaned.")),
                           )),# End fluidrow 
                           fluidRow(column(8,
                                  h2("Map View")
