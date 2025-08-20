@@ -333,7 +333,7 @@ ui <- fluidPage(theme = shinytheme("flatly"),
                                           p(
                                               "The data presented here were gathered from the ",
                                             tags$a(href = 'https://ameriflux.lbl.gov/sites/site-search/#', 'AmeriFlux Site Search'),
-                                              " table in August 2025."
+                                              " table if available, otherwise from pers. comms., in August 2025."
                                             ), 
                                       class = "footer")
                                     )
