@@ -149,9 +149,9 @@ ui <- fluidPage(theme = shinytheme("flatly"),
 
                           fluidRow(br()),# End fluidrow 
                           fluidRow(column(12,
-                                  p(paste0("Sample of Canadian sites for which data has been collected at any time. 
-                                           This sample of ", total_sites, " sites represents Eddy-Covariance research sites across Canada associated 
-                                           with ", total_pi, " Principal Investigators. Further sites will be added as data is collected and cleaned.")),
+                                  p(paste0("Sample of ", total_sites, " Canadian eddy-covariance research sites for which 
+                                            data has been collected at any time. This sample represents flux sites across Canada 
+                                            associated with ", total_pi, " Principal Investigators. Further sites can be added as needed.")),
                           )),# End fluidrow 
                           fluidRow(column(8,
                                  h2("Map View")
@@ -335,7 +335,8 @@ ui <- fluidPage(theme = shinytheme("flatly"),
                                           p(
                                               "The data presented here were gathered from the ",
                                             tags$a(href = 'https://ameriflux.lbl.gov/sites/site-search/#', 'AmeriFlux Site Search'),
-                                              " table if available, otherwise from pers. comms., in August 2025."
+                                              " table if available, otherwise from pers. comms., in August 2025. 
+                                              As such, this information should be considered preliminary."
                                             ), 
                                       class = "footer")
                                     )
