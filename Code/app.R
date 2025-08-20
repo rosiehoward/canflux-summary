@@ -489,7 +489,7 @@ server <- function(input, output) {
     # Start create CanFlux_Table table
     output$CanFlux_Table <- DT::renderDataTable({
       CanFlux_Table_DT_object <- sites_map %>% 
-        select(`Site ID`, `Site Name`,`Lat (deg)`,`Lon (deg)`,`Elevation (m)`,`Principal Investigator`)
+        select(`Site ID`, `Site Name`,`Lat (deg)`,`Lon (deg)`,`Elevation (m)`,`Principal Investigator`,`Site Start`,`Site End`,`Species`)
       # DT info: https://datatables.net/reference/option/dom https://rstudio.github.io/DT/
       datatable(
         CanFlux_Table_DT_object,
