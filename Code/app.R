@@ -48,13 +48,13 @@ rowCallback <- c(
 
 # ***Eventually site list from loaded data above and site list from Site Information page (tsv file) will match!***
 # Temporary solution: rename map sites as sites_map so previous site list is not overwritten
-sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canflux-summary/refs/heads/main/Data/AmeriFlux-sites-Canadian.tsv", show_col_types = FALSE)
-sites_map <- read_tsv(file = "https://github.com/rosiehoward/canflux-summary/blob/df9d52942ffe949e076bbe139b20eb8366076d28/Data/AmeriFlux-sites-Canadian.tsv", show_col_types = FALSE)
+sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canflux-summary/refs/heads/main/Data/AmeriFlux-sites-Canadian-ForApp.tsv", show_col_types = FALSE)
+#sites_map <- read_tsv(file = "https://github.com/rosiehoward/canflux-summary/blob/df9d52942ffe949e076bbe139b20eb8366076d28/Data/AmeriFlux-sites-Canadian.tsv", show_col_types = FALSE)
 #sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canpeat-summary/refs/heads/main/Data/CanPeat-TSV.tsv", show_col_types = FALSE)
 
 # Filter to just sites in Canada
-sites_map <- sites_map |> 
-  filter(Country == 'Canada') 
+#sites_map <- sites_map |> 
+#  filter(Country == 'Canada') 
 
 # Add some new columns
 #sites <- sites |> 
@@ -94,8 +94,8 @@ labs <- lapply(seq(nrow(sites_map)), function(i) {
           sites_map[i, "Lon (deg)"],
            '<br><b>Elev (m):</b> ', 
           sites_map[i, "Elevation (m)"],
-           '<br><b>Clean Data:</b> ', 
-          sites_map[i, "Years of AmeriFlux BASE Data"],
+          # '<br><b>Clean Data:</b> ', 
+          #sites_map[i, "Years of AmeriFlux BASE Data"],
           '<br><b>PI:</b> ', 
           sites_map[i, "Principal Investigator"])
 })
@@ -125,8 +125,8 @@ ui <- fluidPage(theme = shinytheme("flatly"),
                     # )), # End dashboard sidebar
 
     # Application title
-    #titlePanel(div("Can-Peat Flux Sites", style = "background-color: #f2f2f2")),
-    titlePanel("Can-Peat Flux Sites"),
+    titlePanel(div("CanFlux Sites", style = "background-color: #f2f2f2")),
+    #titlePanel("Can-Peat Flux Sites"),
 
          mainPanel(fluidRow(column(12,
                                    h2("Summary"),
