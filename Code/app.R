@@ -171,7 +171,7 @@ ui <- fluidPage(theme = shinytheme("flatly"),
                           column(4)
                           ), # End fluidrow
                           fluidRow(column(12,
-                                          DT::dataTableOutput(outputId = "CanPeat_Table")
+                                          DT::dataTableOutput(outputId = "CanFlux_Table")
                           )
                           ) # End fluidRow
                         ),  # End 'Site Information' page (end MAP)
@@ -391,20 +391,20 @@ server <- function(input, output) {
      })
      # End Create NY5Z map
 
-    # Start create CanPeat_Table table
-     output$CanPeat_Table <- DT::renderDataTable({
-       CanPeat_Table_DT_object <- sites_map %>%
-         select(`Site ID`, `Site Name`,`Lat (deg)`,`Lon (deg)`,`Elevation (m)`,`Principal Investigator`)
+    # Start create CanFlux_Table table
+     output$CanFlux_Table <- DT::renderDataTable({
+       CanFlux_Table_DT_object <- sites_map %>%
+         select(`Site ID`, `Site Name`,`Lat (deg)`,`Lon (deg)`,`Elevation (m)`,`Principal Investigator`,`Site Start`,`Site End`,`Species`)
        # DT info: https://datatables.net/reference/option/dom https://rstudio.github.io/DT/
        datatable(
-         CanPeat_Table_DT_object,
+         CanFlux_Table_DT_object,
          rownames = F,
          # bootstrap style must be added when using a shinytheme https://stackoverflow.com/a/60948767
          style = "bootstrap",
          options = list(dom = 'lftipr', rowCallback = JS(rowCallback)) # This adds in null values
         ) #%>%
 
-     })   # End create CanPeat_Table table
+     })   # End create CanFlux_Table table
   
     
     
@@ -486,20 +486,20 @@ server <- function(input, output) {
     })
     # End Create NY5Z map
     
-    # Start create CanPeat_Table table
-    output$CanPeat_Table <- DT::renderDataTable({
-      CanPeat_Table_DT_object <- sites_map %>% 
+    # Start create CanFlux_Table table
+    output$CanFlux_Table <- DT::renderDataTable({
+      CanFlux_Table_DT_object <- sites_map %>% 
         select(`Site ID`, `Site Name`,`Lat (deg)`,`Lon (deg)`,`Elevation (m)`,`Principal Investigator`)
       # DT info: https://datatables.net/reference/option/dom https://rstudio.github.io/DT/
       datatable(
-        CanPeat_Table_DT_object,
+        CanFlux_Table_DT_object,
         rownames = F,
         # bootstrap style must be added when using a shinytheme https://stackoverflow.com/a/60948767
         style = "bootstrap",
         options = list(dom = 'lftipr', rowCallback = JS(rowCallback)) # This adds in null values
        ) #%>%
 
-    })   # End create CanPeat_Table table
+    })   # End create CanFlux_Table table
 
   #   # a) Time series plots
   #   output$timeseries_plots <- renderPlotly({ 
