@@ -1,4 +1,4 @@
-Site ID	Site Name	Principal Investigator	Lat (deg)	Lon (deg)	Elevation (m)	Site Start	Site End	Species
+Site ID	Site Name	Principal Investigator	Lat (deg)	Lon (deg)	Elevation (m)	Site Start	Site End	Fluxes
 CA-AF1	Acadia Research Forest	Manuel Helbig	46.0092	-66.3627	78	2023		"FC, FH2O, H, LE"
 CA-ARB	Attawapiskat River Bog	Elyn Humphreys	52.6950	-83.9452	90	2010		"FC, FCH4, H, LE"
 CA-ARF	Attawapiskat River Fen	Elyn Humphreys	52.7008	-83.9550	88	2010		"FC, H, LE"
