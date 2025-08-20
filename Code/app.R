@@ -372,39 +372,39 @@ ui <- fluidPage(theme = shinytheme("flatly"),
 # Define server logic required 
 # server <- function(input, output, session) {
 server <- function(input, output) {
-# 
-#      # Begin Create NY5Z map
-#      # Disabled scroll wheel option. Instuctions a combo from https://gis.stackexchange.com/a/54925
-#      # and https://gis.stackexchange.com/a/231632
-#      output$Map <- renderLeaflet({
-#        leaflet(sites_map %>%
-#                  distinct(`Site ID`, `Site Name`, `Lat (deg)`, `Lon (deg)`),
-#                options = leafletOptions(scrollWheelZoom = TRUE)) %>%
-#                # options = leafletOptions(scrollWheelZoom = FALSE)) %>%
-#          addTiles() %>%
-#          addMarkers(lng = ~`Lon (deg)`,
-#                     lat = ~`Lat (deg)`,
-#                     label = lapply(labs, htmltools::HTML),
-#                     clusterOptions = markerClusterOptions()
-#                     )
-# 
-#      })
-#      # End Create NY5Z map
-# 
-#     # Start create CanFlux_Table table
-#      output$CanFlux_Table <- DT::renderDataTable({
-#        CanFlux_Table_DT_object <- sites_map %>%
-#          select(`Site ID`, `Site Name`,`Lat (deg)`,`Lon (deg)`,`Elevation (m)`,`Principal Investigator`,`Site Start`,`Site End`,`Species`)
-#        # DT info: https://datatables.net/reference/option/dom https://rstudio.github.io/DT/
-#        datatable(
-#          CanFlux_Table_DT_object,
-#          rownames = F,
-#          # bootstrap style must be added when using a shinytheme https://stackoverflow.com/a/60948767
-#          style = "bootstrap",
-#          options = list(dom = 'lftipr', rowCallback = JS(rowCallback)) # This adds in null values
-#         ) #%>%
-# 
-#      })   # End create CanFlux_Table table
+
+    #  # Begin Create NY5Z map
+    #  # Disabled scroll wheel option. Instuctions a combo from https://gis.stackexchange.com/a/54925
+    #  # and https://gis.stackexchange.com/a/231632
+    #  output$Map <- renderLeaflet({
+    #    leaflet(sites_map %>%
+    #              distinct(`Site ID`, `Site Name`, `Lat (deg)`, `Lon (deg)`),
+    #            options = leafletOptions(scrollWheelZoom = TRUE)) %>%
+    #            # options = leafletOptions(scrollWheelZoom = FALSE)) %>%
+    #      addTiles() %>%
+    #      addMarkers(lng = ~`Lon (deg)`,
+    #                 lat = ~`Lat (deg)`,
+    #                 label = lapply(labs, htmltools::HTML),
+    #                 clusterOptions = markerClusterOptions()
+    #                 )
+    # 
+    #  })
+    #  # End Create NY5Z map
+    # 
+    # # Start create CanFlux_Table table
+    #  output$CanFlux_Table <- DT::renderDataTable({
+    #    CanFlux_Table_DT_object <- sites_map %>%
+    #      select(`Site ID`, `Site Name`,`Lat (deg)`,`Lon (deg)`,`Elevation (m)`,`Principal Investigator`,`Site Start`,`Site End`,`Fluxes`)
+    #    # DT info: https://datatables.net/reference/option/dom https://rstudio.github.io/DT/
+    #    datatable(
+    #      CanFlux_Table_DT_object,
+    #      rownames = F,
+    #      # bootstrap style must be added when using a shinytheme https://stackoverflow.com/a/60948767
+    #      style = "bootstrap",
+    #      options = list(dom = 'lftipr', rowCallback = JS(rowCallback)) # This adds in null values
+    #     ) #%>%
+    # 
+    #  })   # End create CanFlux_Table table
   
     
     
@@ -489,7 +489,7 @@ server <- function(input, output) {
     # Start create CanFlux_Table table
     output$CanFlux_Table <- DT::renderDataTable({
       CanFlux_Table_DT_object <- sites_map %>% 
-        select(`Site ID`, `Site Name`,`Lat (deg)`,`Lon (deg)`,`Elevation (m)`,`Principal Investigator`,`Site Start`,`Site End`,`Species`)
+        select(`Site ID`, `Site Name`,`Lat (deg)`,`Lon (deg)`,`Elevation (m)`,`Principal Investigator`,`Site Start`,`Site End`,`Fluxes`)
       # DT info: https://datatables.net/reference/option/dom https://rstudio.github.io/DT/
       datatable(
         CanFlux_Table_DT_object,
