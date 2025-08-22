@@ -43,10 +43,14 @@ rowCallback <- c(
 
 # Read in datasets
 
-# need to somehow read this in... run RShiny vizualization code first and save/point to output data for that database (CanPeat)
+# need to somehow read this in... run RShiny vizualization code first and save/point to output data for that database (temporarily using "CanPeat" data so it works)
+#githubDataURL <- RCurl::getURL("https://raw.githubusercontent.com/rosiehoward/canflux-summary/refs/heads/main/Data/data_tmp/all_data.RData")
+#writeLines(githubDataURL, tmp <- tempfile())
+#load(tmp)
+# This only works locally - cannot publish Shiny app from this (later use cloud or other on McGill server?)
 load("/Users/rosie/Documents/Micromet/CANFLUX_Database/canflux-summary/Data/data_tmp/all_data.RData")  # code must have been run first to create this data set
 
-# ***Eventually site list from loaded data above and site list from Site Information page (tsv file) will match!***
+# ***Eventually site list from loaded data above and site list from Site Information page (tsv file) may match!***
 # Temporary solution: rename map sites as sites_map so previous site list is not overwritten
 sites_map <- read_tsv(file = "https://raw.githubusercontent.com/rosiehoward/canflux-summary/refs/heads/main/Data/AmeriFlux-sites-Canadian-ForApp.tsv", show_col_types = FALSE)
 #sites_map <- read_tsv(file = "https://github.com/rosiehoward/canflux-summary/blob/df9d52942ffe949e076bbe139b20eb8366076d28/Data/AmeriFlux-sites-Canadian.tsv", show_col_types = FALSE)
