@@ -23,8 +23,9 @@ library(stringr)
 library(DT)
 library(leaflet)
 library(htmltools)
-#library(shinydashboard)
-#library(plotly)
+library(shinydashboard)
+library(plotly)
+library(lubridate)
 
 # Start define rowCallback function
 # This is to allow NAs to appear in datatables
@@ -43,12 +44,11 @@ rowCallback <- c(
 
 # Read in datasets
 
-# need to somehow read this in... run RShiny vizualization code first and save/point to output data for that database (temporarily using "CanPeat" data so it works)
-#githubDataURL <- RCurl::getURL("https://raw.githubusercontent.com/rosiehoward/canflux-summary/refs/heads/main/Data/data_tmp/all_data.RData")
-#writeLines(githubDataURL, tmp <- tempfile())
-#load(tmp)
+# need to somehow read data in... run RShiny vizualization code first and save/point to output data for that database (temporarily using "CanPeat" data so it works)
 # This only works locally - cannot publish Shiny app from this (later use cloud or other on McGill server?)
 load("/Users/rosie/Documents/Micromet/CANFLUX_Database/canflux-summary/Data/data_tmp/all_data.RData")  # code must have been run first to create this data set
+
+#browser()
 
 # ***Eventually site list from loaded data above and site list from Site Information page (tsv file) may match!***
 # Temporary solution: rename map sites as sites_map so previous site list is not overwritten
@@ -115,7 +115,7 @@ labs <- lapply(seq(nrow(sites_map)), function(i) {
 # )
 
 # Define UI for application
-
+#browser()
 #ui <- fluidPage(theme = shinytheme("flatly"),
 ui <- dashboardPage(skin = 'black', # Begin UI 
                     
@@ -211,7 +211,7 @@ ui <- dashboardPage(skin = 'black', # Begin UI
                                                                           max(data$datetime, na.rm = T))))),
                               br(),
 
-                              # Ouput time series plot with a spinner
+                              # Output time series plot with a spinner
                               shinycssloaders::withSpinner(plotlyOutput('timeseries_plots'),
                                                            type = getOption("spinner.type", default = 5),
                                                            color = getOption("spinner.color", default = "#4D90FE")),
@@ -364,7 +364,9 @@ ui <- dashboardPage(skin = 'black', # Begin UI
                            br(),
                            h3('Acknowledgements'),
                            h4(style="text-align: justify;",
-                              'Site information page based on code from ', tags$a(href = 'https://github.com/norlab/ameriflux-analysis', 'https://github.com/norlab/ameriflux-analysis', target = 'blank'),'. Data visualization application was developed by Sara Knox based on the original code by Sophie Ruehr, which is available is available on ', tags$a(href = 'https://github.com/sruehr?tab=repositories', 'GitHub.', target = 'blank')),
+                              'Site information page based on code from ', tags$a(href = 'https://github.com/norlab/ameriflux-analysis', 'https://github.com/norlab/ameriflux-analysis', target = 'blank'),'. 
+                              Data visualization application was developed by Sara Knox based on the original code by Sophie Ruehr, which is available is available on ', tags$a(href = 'https://github.com/sruehr?tab=repositories', 'GitHub.', target = 'blank'),'
+                              Page compiled by Rosie Howard.'),
 
                          ))
          )  # End dashboard body 
@@ -553,7 +555,7 @@ server <- function(input, output, session) {
 
       df <- selectedDatascatter()
       df$year <- year(data$datetime)
-
+    
       scatter_plot_QCQA(df,xlabel,ylabel, xlabel,ylabel,1)
 
     }) # End plot render
